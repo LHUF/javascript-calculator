@@ -17,16 +17,16 @@ return a / b;
 function operate(num1, num2, operation){
 let result;
 switch (operation) {
-    case "add": 
+    case add: 
     result = add(num1, num2);
     break;
-    case "subtract":
+    case subtract:
     result = sub(num1, num2);
     break;
-    case "multiply":
+    case multiply:
     result = multiply(num1, num2);
     break;
-    case "divide":
+    case divide:
     result = divide(num1, num2);
     break;
     }
