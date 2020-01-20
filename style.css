@@ -28,8 +28,23 @@ body {
 }
 
 #display {
+    width: 98%;
+    height: 94%;
+    background-color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    line-height: 50px;
+    font-size: 35px;
+    overflow-x: scroll;
+}
+
+#displayContainer {
     grid-column: 2 / 5;
     background-color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    line-height: 50px;
+    font-size: 40px;
 }
 
 #one {
