@@ -1,4 +1,6 @@
 let displayValue;
+calcDisplay = document.getElementById("display");
+calcButtonClass = document.getElementsByClassName("calcButton");
 
 function add(a,b){
 return a + b;
@@ -37,13 +39,11 @@ return result;
 
 function userInput(){
 let input = this.getAttribute("data-number");
-if(input === null) return;
-calcDisplay.value += input;
+if(input === "cancel") calcDisplay.value = "";
+else calcDisplay.value += input;
+} 
+
+for (let i = 0; i < calcButtonClass.length; i++) {
+    calcButtonClass[i].addEventListener('click', userInput, false);
 }
 
-classname = document.getElementsByClassName("calcButton");
-for (let i = 0; i < classname.length; i++) {
-    classname[i].addEventListener('click', userInput, false);
-}
-
-calcDisplay = document.getElementById("display");
