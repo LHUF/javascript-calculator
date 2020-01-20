@@ -41,6 +41,7 @@ function userInput(){
 let input = this.getAttribute("data-number");
 if(input === "cancel") calcDisplay.value = "";
 else calcDisplay.value += input;
+displayValue = calcDisplay.value;
 } 
 
 for (let i = 0; i < calcButtonClass.length; i++) {
