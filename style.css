@@ -11,6 +11,19 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     margin: auto;
     border: solid;
+    background-color: lightblue;
+}
+
+.calcButton {
+    background-color: #008CBA;
+    border-radius: 8px;
+    border-style: solid;
+    transition-duration: 0.4s;
+}
+
+.calcButton:hover {
+    color: white;
+    border-color: black;
 }
 
 #display {
@@ -62,7 +75,7 @@ body {
     grid-area: 5 / 3 / 5 / 3;
 }
 
-#delete {
+#decimal {
     grid-area: 5 / 4 / 5 / 4;
 }
 
