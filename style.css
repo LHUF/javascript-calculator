@@ -26,6 +26,7 @@ body {
     color: white;
     border-color: black;
     font-weight: bold;
+    transform: scale(1.02);
 }
 
 #display {
