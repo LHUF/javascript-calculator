@@ -39,7 +39,10 @@ return result;
 
 function userInput(){
 let input = this.getAttribute("data-number");
-if(input === "cancel") calcDisplay.value = "";
+if(input === "cancel"){
+     calcDisplay.value = "";
+     displayValue = undefined;
+}
 else calcDisplay.value += input;
 displayValue = calcDisplay.value;
 } 
