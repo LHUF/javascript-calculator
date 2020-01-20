@@ -1,4 +1,5 @@
 let displayValue;
+calcDisplay = document.getElementById("display");
 
 function add(a,b){
 return a + b;
@@ -37,7 +38,6 @@ return result;
 
 function userInput(){
 let input = this.getAttribute("data-number");
-if(input === null) return;
 calcDisplay.value += input;
 }
 
@@ -45,5 +45,3 @@ classname = document.getElementsByClassName("calcButton");
 for (let i = 0; i < classname.length; i++) {
     classname[i].addEventListener('click', userInput, false);
 }
-
-calcDisplay = document.getElementById("display");
