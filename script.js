@@ -1,5 +1,6 @@
 let displayValue;
 calcDisplay = document.getElementById("display");
+let operation;
 
 function add(a,b){
 return a + b;
@@ -38,10 +39,14 @@ return result;
 
 function userInput(){
 let input = this.getAttribute("data-number");
+if(input === null) return;
 calcDisplay.value += input;
+displayValue = calcDisplay.value;
 }
 
-classname = document.getElementsByClassName("calcButton");
-for (let i = 0; i < classname.length; i++) {
-    classname[i].addEventListener('click', userInput, false);
+calcButton = document.getElementsByClassName("calcButton");
+for (let i = 0; i < calcButton.length; i++) {
+    calcButton[i].addEventListener('click', userInput, false);
 }
+
+addBtn = document.getElementById("add");
