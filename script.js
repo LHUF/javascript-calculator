@@ -1,6 +1,7 @@
-let displayValue;
-calcDisplay = document.getElementById("display");
-let operation;
+let displayValue = 0;
+let userOperation;
+let workingNum;
+
 
 function add(a,b){
 return a + b;
@@ -37,11 +38,12 @@ switch (operation) {
 return result;
 }
 
+calcDisplay = document.getElementById("display");
 function userInput(){
 let input = this.getAttribute("data-number");
 if(input === null) return;
 calcDisplay.value += input;
-displayValue = calcDisplay.value;
+displayValue = parseInt(calcDisplay.value);
 }
 
 calcButton = document.getElementsByClassName("calcButton");
@@ -50,3 +52,18 @@ for (let i = 0; i < calcButton.length; i++) {
 }
 
 addBtn = document.getElementById("add");
+addBtn.addEventListener("click", userAdd, false);
+function userAdd(){
+    workingNum = displayValue;
+    calcDisplay.value = "";
+    userOperation = "addition";
+}
+
+equalsBtn = document.getElementById("equals")
+equalsBtn.addEventListener("click", userEqual, false);
+function userEqual(){
+    if(userOperation === "addition"){
+        calcDisplay.value = `${add(workingNum, displayValue)}`
+        displayValue = parseInt(calcDisplay.value);
+    }
+}
