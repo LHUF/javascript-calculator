@@ -2,7 +2,7 @@ let displayValue = 0;
 let userOperation;
 let workingNum;
 
-
+//operation functions
 function add(a,b){
 return a + b;
 }
@@ -39,6 +39,7 @@ switch (operation) {
 return result;
 }
 
+//display population
 calcDisplay = document.getElementById("display");
 function userInput(){
 let input = this.getAttribute("data-number");
@@ -52,6 +53,7 @@ for (let i = 0; i < calcButton.length; i++) {
     calcButton[i].addEventListener('click', userInput, false);
 }
 
+//button logic
 addBtn = document.getElementById("add");
 addBtn.addEventListener("click", userAdd, false);
 function userAdd(){
