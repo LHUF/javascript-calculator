@@ -103,3 +103,12 @@ function userEqual(){
         displayValue = parseInt(calcDisplay.value);
     }
 }
+
+cancelBtn = document.getElementById("allCancel");
+cancelBtn.addEventListener("click", userCancel, false);
+function userCancel(){
+    workingNum = 0;
+    displayValue = 0;
+    calcDisplay.value = "";
+    userOperation = undefined;
+}
