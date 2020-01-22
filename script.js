@@ -59,11 +59,47 @@ function userAdd(){
     userOperation = "addition";
 }
 
+subBtn = document.getElementById("subtract");
+subBtn.addEventListener("click", userSub, false);
+function userSub(){
+    workingNum = displayValue;
+    calcDisplay.value = "";
+    userOperation = "subtraction";
+}
+
+multBtn = document.getElementById("multiply");
+multBtn.addEventListener("click", userMult, false);
+function userMult(){
+    workingNum = displayValue;
+    calcDisplay.value = "";
+    userOperation = "multiplication";
+}
+
+divBtn = document.getElementById("divide");
+divBtn.addEventListener("click", userDiv, false);
+function userDiv(){
+    workingNum = displayValue;
+    calcDisplay.value = "";
+    userOperation = "division";
+}
+
 equalsBtn = document.getElementById("equals")
 equalsBtn.addEventListener("click", userEqual, false);
 function userEqual(){
     if(userOperation === "addition"){
-        calcDisplay.value = `${add(workingNum, displayValue)}`
+        calcDisplay.value = `${add(workingNum, displayValue)}`;
+        displayValue = parseInt(calcDisplay.value);
+    }
+    if(userOperation === "subtraction"){
+        calcDisplay.value = `${sub(workingNum, displayValue)}`;
+        displayValue = parseInt(calcDisplay.value);
+    }
+    if(userOperation === "multiplication"){
+        calcDisplay.value = `${multiply(workingNum, displayValue)}`;
+        displayValue = parseInt(calcDisplay.value);
+    }
+    if(userOperation === "division"){
+        calcDisplay.value = `${divide(workingNum, displayValue)}`;
         displayValue = parseInt(calcDisplay.value);
     }
 }
